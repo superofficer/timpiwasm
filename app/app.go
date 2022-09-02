@@ -108,7 +108,7 @@ import (
 
 const (
 	AccountAddressPrefix = "timpi"
-	Name                 = "timpi"
+	Name                 = "timpiwasm"
 )
 
 var (
