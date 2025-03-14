@@ -19,8 +19,7 @@ import { useStore } from 'vuex'
 export default {
   components: { SpTheme, SpNavbar },
 
-  setup() {
-    // store
+  setup() {    
     let $s = useStore()
 
     // router
@@ -31,14 +30,11 @@ export default {
       { name: 'Portfolio', url: '/portfolio' },
       { name: 'Data', url: '/data' }
     ]
-
-    // computed
+    
     let address = computed(() => $s.getters['common/wallet/address'])
-
-    // lh
+    
     onBeforeMount(async () => {
       await $s.dispatch('common/env/init')
-
       router.push('portfolio')
     })
 
